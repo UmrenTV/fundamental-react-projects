@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import List from "./components/List";
 import data from "./data";
 
 const App = () => {
@@ -7,23 +9,21 @@ const App = () => {
         setPeople([]);
     };
     return (
-        <>
-            <h2>Birthday Reminder - Starter</h2>
-            <div className="birthday-list">
-                {people.map((person) => {
-                    return (
-                        <div className="birthday" key={person.id}>
-                            <img src={person.image} />
-                            <h3>{person.name}</h3>
-                            <p>{person.age}</p>
-                        </div>
-                    );
-                })}
-                <button type="button" onClick={removeAll}>
-                    Remove All
+        <main>
+            <section className="container">
+                <h3>{people.length} birthdays today:</h3>
+                <List people={people} removeAll={removeAll} />
+                <button
+                    type="button"
+                    onClick={() => {
+                        setPeople([]);
+                    }}
+                    className="btn btn-block"
+                >
+                    Clear All
                 </button>
-            </div>
-        </>
+            </section>
+        </main>
     );
 };
 export default App;
