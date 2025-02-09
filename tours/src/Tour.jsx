@@ -4,7 +4,7 @@ const Tour = ({ tour, removeTour }) => {
     const [readMore, setReadMore] = useState(false);
     const { image, info, name, price, id } = tour;
     return (
-        <div className="single-tour">
+        <article className="single-tour">
             <span className="tour-price">{price}</span>
             <img src={image} alt={name} className="img" />
             <div className="tour-info">
@@ -31,7 +31,7 @@ const Tour = ({ tour, removeTour }) => {
                     Not Interested
                 </button>
             </div>
-        </div>
+        </article>
     );
 };
 
