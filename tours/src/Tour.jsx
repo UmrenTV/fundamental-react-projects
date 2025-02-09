@@ -5,7 +5,7 @@ const Tour = ({ tour, removeTour }) => {
     const { image, info, name, price, id } = tour;
     return (
         <div className="single-tour">
-            <p className="tour-price">{price}</p>
+            <span className="tour-price">{price}</span>
             <img src={image} alt={name} className="img" />
             <div className="tour-info">
                 <h5>{name}</h5>
