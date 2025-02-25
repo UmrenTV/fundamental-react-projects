@@ -265,54 +265,61 @@ ul {
 }
 /* ============= PROJECT CSS =============== */
 
-.nav-container,
-.nav-main {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    height: 3rem;
+nav {
+    background: var(--white);
+    box-shadow: var(--shadow-1);
 }
-.nav-main {
-    width: 100%;
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 .nav-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-500);
     background: transparent;
-    border: none;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-}
-.nav-container {
-    width: 85%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-link {
-    color: var(--grey-900);
-    text-decoration: none;
+    border-color: transparent;
     transition: var(--transition);
-}
-
-.nav-link:hover {
-    color: var(--primary-500);
-}
-
-.nav-link.active {
-    color: var(--primary-500);
-}
-
-.hamburger {
-    font-size: 1.2rem;
     cursor: pointer;
-    color: var(--grey-900);
+}
+
+.nav-toggle:hover {
+    color: var(--primary-700);
+    transform: rotate(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a {
+    color: var(--grey-700);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+    display: block;
+    /* display block is important so the links span the whole width */
+    padding: 0.5rem 1rem;
     transition: var(--transition);
 }
 
-.hamburger:hover {
+.links a:hover {
+    background: var(--primary-100);
     color: var(--primary-500);
+    padding-left: 1.5rem;
+}
+
+/* 160px */
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-container {
+    height: 10rem;
 }
