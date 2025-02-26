@@ -1,4 +1,17 @@
+import Home from "./Home";
+import Sidebar from "./Sidebar";
+import Modal from "./Modal";
+
+import { useGlobalContext } from "./context";
+
 const App = () => {
-  return <h2>Sidebar Starter</h2>;
+    const { modal } = useGlobalContext();
+    return (
+        <main>
+            <Sidebar />
+            <Home />
+            {modal && <Modal />}
+        </main>
+    );
 };
 export default App;
