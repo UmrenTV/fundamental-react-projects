@@ -7,11 +7,7 @@ const Sidebar = () => {
     return (
         <div className={`sidebar-container ${sidebar && "active"}`}>
             <div className="sidebar-header">
-                <a href="/">
-                    <h3 className={`sidebar-logo ${sidebar && "active"}`}>
-                        LOGO
-                    </h3>
-                </a>
+                <h3 className={`sidebar-logo ${sidebar && "active"}`}>LOGO</h3>
                 <FaBars
                     className={`burger-icon ${sidebar && "active"}`}
                     onClick={() => {

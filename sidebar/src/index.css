@@ -300,7 +300,7 @@ main {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.1rem;
 }
 .sidebar-logo {
     color: black;
