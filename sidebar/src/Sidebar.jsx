@@ -4,11 +4,14 @@ import { links, social } from "./data";
 
 const Sidebar = () => {
     const { sidebar, setSidebar } = useGlobalContext();
-    console.log(links);
     return (
         <div className={`sidebar-container ${sidebar && "active"}`}>
             <div className="sidebar-header">
-                <h3 className={`sidebar-logo ${sidebar && "active"}`}>LOGO</h3>
+                <a href="/">
+                    <h3 className={`sidebar-logo ${sidebar && "active"}`}>
+                        LOGO
+                    </h3>
+                </a>
                 <FaBars
                     className={`burger-icon ${sidebar && "active"}`}
                     onClick={() => {
