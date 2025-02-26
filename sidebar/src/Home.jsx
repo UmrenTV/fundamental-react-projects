@@ -7,8 +7,9 @@ const Home = () => {
     };
     return (
         <div className="home-container">
-            <h1>Home</h1>
-            <button onClick={openModal}>Show Modal</button>
+            <button className="btn" onClick={openModal}>
+                Show Modal
+            </button>
         </div>
     );
 };
