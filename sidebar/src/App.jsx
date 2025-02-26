@@ -10,7 +10,7 @@ const App = () => {
         <main>
             <Sidebar />
             <Home />
-            {modal && <Modal />}
+            <Modal />
         </main>
     );
 };
